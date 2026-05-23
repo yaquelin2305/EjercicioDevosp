@@ -1,6 +1,6 @@
 services:
   db:
-    image: 536342473074.dkr.ecr.us-east-1.amazonaws.com/db:latest
+    image: 636779841870.dkr.ecr.us-east-1.amazonaws.com/db:latest
     container_name: tienda_db
     environment:
       MYSQL_ROOT_PASSWORD: admin123
@@ -16,7 +16,7 @@ services:
       retries: 5
 
   backend:
-    image: 536342473074.dkr.ecr.us-east-1.amazonaws.com/backend:latest
+    image: 636779841870.dkr.ecr.us-east-1.amazonaws.com/backend:latest
     container_name: tienda_backend
     environment:
       PORT: 3001
@@ -34,7 +34,7 @@ services:
       - tienda_net
 
   frontend:
-    image: 536342473074.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
+    image: 636779841870.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
     container_name: tienda_frontend
     ports:
       - "80:80"
